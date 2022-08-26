@@ -1,48 +1,33 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
-
-    <form class="form new-project-form">
+<h1 class="content-head is-center">Welcome, {{name}}!</h1>
+<h3>Create a New Blog Post:</h3>
+<div class="pure-u-1">
+    <form class="form new-post-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="post-name"></label>
+        <input class="form-input" type="text" id="post-name" name="post-name" placeholder="Topic" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        <label for="post-desc"></label>
+        <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Express yourself!"></textarea>
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary" id="click">Post it!</button>
       </div>
     </form>
   </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
+<div id="list" class="pure-u-1">
+  {{#if posts.length}}
+  <div class="col-md-6 post-list">
+    <h3>View Posts and Comments</h3>  
+  
+  {{#each posts as |post|}}
+        <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>  
+      
+        <button type="delete" class="button-error pure-button" data-id="{{post.id}}">DELETE</button>
     {{/each}}
   </div>
+  <script src="/js/profile.js"></script>
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="/js/post.js"></script>

@@ -1,0 +1,42 @@
+.post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: rgb(255, 255, 255);
+    /* line-height: 1.8em; */
+  }
+  
+  .button-error {
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
+  }
+  
+#comment-input{
+  width: 562px;
+  /* height: 10px; */
+  height: 125px;
+}
+    
+  .created{
+    float: right;
+    margin-left: 1em;
+  }
+  .comment {
+  color: white;
+  background-color: black;
+  
+  }
+  .reply{
+    color: red;
+    float: right;
+  }
+
+  .post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+  }
+
+  .new-comment{
+    padding: 68pt;
+    margin-left: 5px;
+    margin-bottom: 12px;
+  }
