@@ -1,6 +1,6 @@
 <h1 class="content-head is-center">Welcome, {{name}}!</h1>
 <h3>Create a New Blog Post:</h3>
-<div class="pure-u-1">
+<div class="">
     <form class="form new-post-form">
       <div class="form-group">
         <label for="post-name"></label>
@@ -23,7 +23,7 @@
   {{#each posts as |post|}}
         <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>  
       
-        <button type="delete" class="button-error pure-button" data-id="{{post.id}}">DELETE</button>
+        <button type="delete" class="" data-id="{{post.id}}">DELETE</button>
     {{/each}}
   </div>
   <script src="/js/profile.js"></script>
