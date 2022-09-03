@@ -6,12 +6,9 @@
 <div class="post">
   <div class="">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/post/{{post.id}}">{{post.name}}</a>
-      {{{get_emoji}}}
       <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
-    <a href="/get/{{comment.id}}">{{comment.post}}</a>
+    <a href="#">{{commentLength}}</a>
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
 </div>
