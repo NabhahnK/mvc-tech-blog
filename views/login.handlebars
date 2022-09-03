@@ -1,34 +1,38 @@
 <div class="container">
   <h3>Login</h3>
+
   <form class="login-form">
-    <div class="form-group">
-      <label for="email-login">Email</label>
-      <input type="email" id="email-login" placeholder="Email" />
-      <span class="">This is a required field.</span>
-      <label for="password-login">Password</label>
-      <input type="password" id="password-login" placeholder="Password" />
-      <label for="stacked-remember" class="pure-checkbox">
-        <input type="checkbox" id="stacked-remember" /> Remember me
-      </label>
-      <button type="submit" class="">Sign in</button>
+    <div class="mb-3 form-group">
+      <label for="email-login" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email-login" placeholder="Email">
+    </div>
+    <div class="mb-3 form-group">
+      <label for="password-login" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password-login" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In!</button>
   </form>
 </div>
-</div>
+
 
 <div class="container">
   <h3>Sign Up!</h3>
-  <form class="signup-form">
-    <div class="form-group">
-      <label for="name-signup">Name:</label>
-      <input class="form-input" type="text" id="name-signup" />
+
+    <form class="signup-form">
+    <div class="mb-3 form-group">
+      <label for="name-signup" class="form-label">Name:</label>
+      <input type="text" class="form-control form-input" id="name-signup">
     </div>
-    <label for="email-signup">Email</label>
-    <input type="email" id="email-signup" placeholder="Email" />
-    <span class="">This is a required field.</span>
-    <label for="password-signup">Password</label>
-    <input type="password" id="password-signup" placeholder="Password" />
-    <button type="submit" class="">Sign Up!</button>
+    <div class="mb-3 form-group">
+      <label for="email-signup" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="email-signup" placeholder="Email">
+    </div>
+    <div class="mb-3 form-group">
+      <label for="password-signup" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password-signup" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up!</button>
   </form>
 </div>
-</div>
+
 <script src="/js/login.js"></script>
