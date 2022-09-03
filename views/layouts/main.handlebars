@@ -8,38 +8,47 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="/css/post.css">
-  <link rel="stylesheet" href="/css/profile.css">  
+  <link rel="stylesheet" href="/css/profile.css">
   <link rel="stylesheet" href="/css/resource.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div id="layout">
-  
-    {{!-- Sidebar --}}
-    <div class="sidebar">
-      <div class="header">
-        <h1 class="brand-title">Bootcamp Survival Guide </h1>
-        <h2 class="brand-tagline">The Hub for all Full-Stack Coding Bootcampers!</h2>
-      {{!-- nav items --}}
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class=""><a href="/" class="">Home</a></li>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-          <li class=""><a href="/" class="" id="logout">Logout</a></li>
-          <li class=""><a href="/profile" class="" >Profile</a></li>
-          {{else}}
-          <li class=""><a href="/login" class="">Login/Sign Up</a></li>
-          {{/if}}
-        </ul>
-      </nav>
-    </div>
-  </div>
 
-{{!-- Main body --}}
-<div class="content">
-  <div id="main">
+    {{!-- Sidebar --}}
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MVC Style Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            {{#if logged_in}}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login/Sign Up</a>
+            </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {{!-- Main body --}}
+    <div class="content">
+      <div id="main">
         {{{body}}}
       </div>
     </div>
@@ -50,4 +59,5 @@
   {{/if}}
   </div>
 </body>
+
 </html>
