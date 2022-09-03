@@ -22,7 +22,8 @@
     {{#each posts as |post|}}
     <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
 
-    <button type="delete" class="" data-id="{{post.id}}">DELETE</button>
+    <button id="delButtonHandler" type="delete" class="" data-id="{{post.id}}">DELETE</button>
+
     {{/each}}
   </div>
   <script src="/js/profile.js"></script>
