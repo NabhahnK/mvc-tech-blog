@@ -1,5 +1,6 @@
 const upButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
+        event.preventDefault();
         const id = event.target.getAttribute('data-id');
 
         const title = document.querySelector('#post-name').value.trim()
@@ -8,7 +9,7 @@ const upButtonHandler = async (event) => {
 
         const response = await fetch(`/api/post/update/${id}`, {
             method: 'PUT',
-            body: JSON.stringify({ title, text }),
+            body: JSON.stringify(newInfo),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -17,7 +18,7 @@ const upButtonHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            alert('Failed to delete post');
+            alert('Failed to update post');
         }
     }
 };
