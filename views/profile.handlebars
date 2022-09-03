@@ -1,23 +1,22 @@
 <h1 class="content-head is-center">Welcome, {{name}}!</h1>
 <h3>Create a New Blog Post:</h3>
-<div class="">
+<div class="container text-center">
+
   <form class="form new-post-form">
-    <div class="form-group">
-      <label for="post-name"></label>
-      <input class="form-input" type="text" id="post-name" name="post-name" placeholder="Topic" />
+    <div class="mb-3 form-group">
+      <label for="post-name" class="form-label">Topic</label>
+      <input type="text" class="form-control form-input" id="post-name" name="post-name" placeholder="Topic" aria-describedby="post tittle">
     </div>
-    <div class="form-group">
-      <label for="post-desc"></label>
-      <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Express yourself!"></textarea>
+    <div class="mb-3 form-group">
+      <label for="post-desc" class="form-label">Test</label>
+      <textarea class="form-control" name="post-desc" id="post-desc"></textarea>
     </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary" id="click">Post it!</button>
-    </div>
+    <button type="submit" class="btn btn-primary" id="click">Post it!</button>
   </form>
 </div>
-<div id="list" class="pure-u-1">
+<div id="list" class="container text-center">
   {{#if posts.length}}
-  <div class="col-md-6 post-list">
+  <div class="container text-center post-list">
     <h3>View Posts and Comments</h3>
 
     {{#each posts as |post|}}
