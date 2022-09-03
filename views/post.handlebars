@@ -1,54 +1,51 @@
 <div class="posts" data-postID="{{id}}">
-    <h1 class="content-subhead">Check your Comments</h1>
-        <header class="post-header"><img width="48" height="48" alt="Tilo Mitra's avatar" class="post-avatar" src="https://avatars.dicebear.com/api/bottts/:seed.svg"> 
-        </header>
-<div class="text-center">
-  <h2>{{title}}</h2>
+  <h1 class="content-subhead">Check your Comments</h1>
+  <header class="post-header"><img width="48" height="48" alt="Tilo Mitra's avatar" class="post-avatar"
+      src="https://avatars.dicebear.com/api/bottts/:seed.svg">
+  </header>
+  <div class="text-center">
+    <h2>{{title}}</h2>
 
-  <p>{{text}}</p>
-<div class="created"><a>Created by {{user.name}} on {{format_date date_created}}</a>
-          </div>
+    <p>{{text}}</p>
+    <div class="created"><a>Created by {{user.name}} on {{format_date date_created}}</a>
+    </div>
   </div> <br>
-            {{!-- Past Comments --}}
-            <div class="comment">
-              <h3>Comments</h3>
-            </div>
-            <!-- Loop over each object in the projects array -->
-            {{#each comments as |comment| }}
-            <div class="comment">
-              <div class="content">
-                <a class="author">{{user.name}}</a>
-                <div class="metadata">
-                  <span class="date">{{date_created}}</span>
-                </div>
-                <div class="text">
-                  {{text}}
-                </div>
-                <div class="actions">
-                  <a class="reply">Reply</a>
-                </div>
-              </div>
-            </div>
-            {{/each}}
-            {{!-- Comments section --}}
-      {{!-- To add and make comments to a post --}}
-      <br>
+  {{!-- Past Comments --}}
+  <div class="comment">
+    <h3>Comments</h3>
+  </div>
+  <!-- Loop over each object in the projects array -->
+  {{#each comments as |comment| }}
+  <div class="comment">
+    <div class="content">
+      <a class="author">{{user.name}}</a>
+      <div class="metadata">
+        <span class="date">{{date_created}}</span>
+      </div>
+      <div class="text">
+        {{text}}
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  {{!-- Comments section --}}
+  {{!-- To add and make comments to a post --}}
+  <br>
 
-<div class="new-comment">
+  <div class="new-comment">
     <form>
-       <textarea id="comment-input" placeholder="Add Your Comment" value=" "></textarea>
-       <div class="btn">
-           <input id="submit" type="submit" value="Comment">
-           <button id="submit">  
-            &#128591;</button>
-       </div> 
+      <textarea id="comment-input" placeholder="Add Your Comment" value=" "></textarea>
+      <div class="btn">
+        <input id="submit" type="submit" value="Comment">
+        <button id="submit">
+          &#128591;</button>
+      </div>
     </form>
+  </div>
 </div>
-            </div>
-          </div>
-        </div>
-  <script src="/js/comment.js"></script>
-
-
-    
-
+</div>
+</div>
+<script src="/js/comment.js"></script>

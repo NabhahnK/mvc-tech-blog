@@ -1,29 +1,29 @@
 <h1 class="content-head is-center">Welcome, {{name}}!</h1>
 <h3>Create a New Blog Post:</h3>
 <div class="">
-    <form class="form new-post-form">
-      <div class="form-group">
-        <label for="post-name"></label>
-        <input class="form-input" type="text" id="post-name" name="post-name" placeholder="Topic" />
-      </div>
-      <div class="form-group">
-        <label for="post-desc"></label>
-        <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Express yourself!"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="click">Post it!</button>
-      </div>
-    </form>
-  </div>
+  <form class="form new-post-form">
+    <div class="form-group">
+      <label for="post-name"></label>
+      <input class="form-input" type="text" id="post-name" name="post-name" placeholder="Topic" />
+    </div>
+    <div class="form-group">
+      <label for="post-desc"></label>
+      <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Express yourself!"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="click">Post it!</button>
+    </div>
+  </form>
+</div>
 <div id="list" class="pure-u-1">
   {{#if posts.length}}
   <div class="col-md-6 post-list">
-    <h3>View Posts and Comments</h3>  
-  
-  {{#each posts as |post|}}
-        <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>  
-      
-        <button type="delete" class="" data-id="{{post.id}}">DELETE</button>
+    <h3>View Posts and Comments</h3>
+
+    {{#each posts as |post|}}
+    <h3><a href="/post/{{post.id}}">{{post.title}}</a></h3>
+
+    <button type="delete" class="" data-id="{{post.id}}">DELETE</button>
     {{/each}}
   </div>
   <script src="/js/profile.js"></script>
