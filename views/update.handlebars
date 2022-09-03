@@ -1,16 +1,17 @@
 <h1 class="content-head is-center">Welcome, {{name}}!</h1>
-<h3>Create a New Blog Post:</h3>
+<h3>Update a Blog Post:</h3>
 <div class="container text-center">
 
-  <form class="form new-post-form">
-    <div class="mb-3 form-group">
-      <label for="post-name" class="form-label">Topic</label>
-      <input type="text" class="form-control form-input" id="post-name" name="post-name" placeholder="Topic" aria-describedby="post tittle">
-    </div>
-    <div class="mb-3 form-group">
-      <label for="post-desc" class="form-label">Test</label>
-      <textarea class="form-control" name="post-desc" id="post-desc"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary" id="click">Post it!</button>
-  </form>
+    <form class="form new-post-form">
+        <div class="mb-3 form-group">
+            <label for="post-name" class="form-label">Topic</label>
+            <input type="text" class="form-control form-input" id="post-name" name="post-name" placeholder="Topic"
+                aria-describedby="post tittle" value="{{title}}">
+        </div>
+        <div class="mb-3 form-group">
+            <label for="post-desc" class="form-label">Test</label>
+            <textarea class="form-control" name="post-desc" id="post-desc">{{text}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="click">Post it!</button>
+    </form>
 </div>
