@@ -14,24 +14,12 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const id = req.params.id;
-    const commentData = await Comment.findAll({
-      where: {
-        post_Id: id
-      }
-    });
-
-    // Serialize data so the template can read it
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
-    const commentLength = comments.length;
-
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('home', {
       posts,
-      commentLength,
       logged_in: req.session.logged_in
     });
   } catch (err) {
