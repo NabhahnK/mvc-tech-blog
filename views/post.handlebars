@@ -1,28 +1,23 @@
-<div class="posts" data-postID="{{id}}">
-  <h1 class="content-subhead">Check your Comments</h1>
-  <header class="post-header"><img width="48" height="48" alt="Tilo Mitra's avatar" class="post-avatar"
-      src="https://avatars.dicebear.com/api/bottts/:seed.svg">
-  </header>
-  <div class="text-center">
-    <h2>{{title}}</h2>
+<div class="posts" data-postID="{{id}}" style="background-color: #808080;">
+    <h1 style="background-color:#63666A;">{{title}}</h1>
 
     <p>{{text}}</p>
     <div class="created"><a>Created by {{user.name}} on {{format_date date_created}}</a>
     </div>
   </div> <br>
   {{!-- Past Comments --}}
-  <div class="comment">
+  <div class="comment" style="background-color:#63666A;">
     <h3>Comments</h3>
   </div>
   <!-- Loop over each object in the projects array -->
   {{#each comments as |comment| }}
-  <div class="comment">
+  <div class="comment" style="background-color: #808080;">
     <div class="content">
-      <a class="author">{{user.name}}</a>
+      <p class="author">{{user.name}}</p>
       <div class="metadata">
         <span class="date">{{date_created}}</span>
       </div>
-      <div class="text">
+      <div class="text" style="background-color:#63666A;">
         {{text}}
       </div>
       <div class="actions">
@@ -35,13 +30,11 @@
   {{!-- To add and make comments to a post --}}
   <br>
 
-  <div class="new-comment">
+  <div class="new-comment" style="background-color: #808080;">
     <form>
       <textarea id="comment-input" placeholder="Add Your Comment" value=" "></textarea>
       <div class="btn">
         <input id="submit" type="submit" value="Comment">
-        <button id="submit">
-          &#128591;</button>
       </div>
     </form>
   </div>

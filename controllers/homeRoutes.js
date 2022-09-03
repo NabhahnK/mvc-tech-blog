@@ -42,7 +42,13 @@ router.get('/post/:id', async (req, res) => {
     const commentData = await Comment.findAll({
       where: {
         post_Id: id
-      }
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
     });
 
     // Serialize data so the template can read it
