@@ -2,15 +2,15 @@
 
   ## Description
 
-  ![Blog](./assets/images/screen-shot.PNG "Blog")
+  ![Blog](./assets/mvcblog.PNG "Blog")
 
   I wanted to build a full-Stack blog. It gave me practice with express routes and mySQL models. It lets people talk to each other and comment on their posts. I learned a lot and to double check fetch routes.
 
-  I have also deployed it as a [GitHub Page](https://nabhahnk.github.io/Horiseon/).
+  I have also deployed it as a [Heroku app](https://mvc-style-blog.herokuapp.com/).
 
   # Table of Contents
   1. [Description](#description)
-  2. [Installation](#dnstallation)
+  2. [Installation](#installation)
   3. [Usage](#usage)
   4. [Contributing](#contributing)
   5. [Tests](#tests)
